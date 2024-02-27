@@ -1,14 +1,14 @@
-def calculate_gcs(eye_opening, verbal_response, motor_response):
+def calculate_gcs_score(eye_opening, verbal_response, motor_response):
     """
-    Calculate the Glasgow Coma Scale (GCS) score based on eye opening, verbal response, and motor response.
+    Calculate Glasgow Coma Scale (GCS) score.
 
     Parameters:
-    - eye_opening: Score for eye opening (integer: 1-4)
-    - verbal_response: Score for verbal response (integer: 1-5)
-    - motor_response: Score for motor response (integer: 1-6)
+    - eye_opening: Numeric score for eye opening (int)
+    - verbal_response: Numeric score for verbal response (int)
+    - motor_response: Numeric score for motor response (int)
 
     Returns:
-    - GCS score (integer: 3-15)
+    - Glasgow Coma Scale (GCS) score (int)
     """
     # Validate input scores
     if not (1 <= eye_opening <= 4):
@@ -27,8 +27,5 @@ eye_opening_score = 4
 verbal_response_score = 5
 motor_response_score = 6
 
-try:
-    gcs_score = calculate_gcs(eye_opening_score, verbal_response_score, motor_response_score)
-    print("Glasgow Coma Scale (GCS) Score:", gcs_score)
-except ValueError as e:
-    print("Error:", e)
+gcs = calculate_gcs_score(eye_opening_score, verbal_response_score, motor_response_score)
+print("GCS Score:", gcs)
